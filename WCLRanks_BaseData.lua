@@ -999,6 +999,11 @@ WCLRanks_BaseData = {
 			['name']='奧妮克希亞',
 			['encounters']='1'
 		},
+		[1020]={
+			['id']='1020',
+			['name']='冰冠城塞',
+			['encounters']='12'
+		},
 	},
 	['zoneEncounters']={
 		[1014]={
@@ -1235,6 +1240,56 @@ WCLRanks_BaseData = {
 			{
 				['id']=101084,
 				['name']='奧妮克希亞',--"Onyxia"
+			},
+		},
+		[1020]={
+			{
+				['id']=845,
+				['name']='瑪洛嘉領主',--"Lord Marrowgar"
+			},
+			{
+				['id']=846,
+				['name']='亡語女士',--"Lady Deathwhisper"
+			},
+			{
+				['id']=847,
+				['name']='冰冠城塞砲艇戰',--"Icecrown Gunship Battle"
+			},
+			{
+				['id']=848,
+				['name']='死亡使者薩魯法爾',--"Deathbringer Saurfang"
+			},
+			{
+				['id']=849,
+				['name']='膿腸',--"Festergut"
+			},
+			{
+				['id']=850,
+				['name']='腐臉',--"Rotface"
+			},
+			{
+				['id']=851,
+				['name']='普崔希德教授',--"Professor Putricide"
+			},
+			{
+				['id']=852,
+				['name']='血腥議會',--"Blood Council"
+			},
+			{
+				['id']=853,
+				['name']='血腥女王菈娜薩爾',--"Blood-Queen Lana'thel"
+			},
+			{
+				['id']=854,
+				['name']='瓦莉絲瑞雅‧夢行者',--"Valithria Dreamwalker"
+			},
+			{
+				['id']=855,
+				['name']='辛德拉苟莎',--"Sindragosa"
+			},
+			{
+				['id']=856,
+				['name']='The Lich King',--"The Lich King"
 			},
 		},
 	},

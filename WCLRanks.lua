@@ -92,6 +92,8 @@ function WCLRanks:Init()
   self.db.show["1018_25"] = true;
   self.db.show["1019_10"] = true;
   self.db.show["1019_25"] = true;
+  self.db.show["1020_10"] = true;
+  self.db.show["1020_25"] = true;
   self:LogDebug("Init");
   self:SetScript("OnEvent", self.OnEvent);
   self:RegisterEvent("ADDON_LOADED");
@@ -262,6 +264,24 @@ function WCLRanks:InitOptions()
 		self.db.show["1019_25"] = self.optionShow_1019_25:GetChecked();
 	end)
 	self.optionShow_1019_25:SetChecked(self.db.show["1019_25"]);
+	pos_y = pos_y - 20
+  -- Show Icecrown Citadel 10 player logs
+  self.optionShow_1020_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1020_10:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1020_10.Text:SetText(L["OPTION_SHOW_1020_10"]);
+	self.optionShow_1020_10:SetScript("OnClick", function(_, value)
+		self.db.show["1020_10"] = self.optionShow_1020_10:GetChecked();
+	end)
+	self.optionShow_1020_10:SetChecked(self.db.show["1020_10"]);
+	pos_y = pos_y - 20
+  -- Show Icecrown Citadel 25 player logs
+  self.optionShow_1020_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1020_25:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1020_25.Text:SetText(L["OPTION_SHOW_1020_25"]);
+	self.optionShow_1020_25:SetScript("OnClick", function(_, value)
+		self.db.show["1020_25"] = self.optionShow_1020_25:GetChecked();
+	end)
+	self.optionShow_1020_25:SetChecked(self.db.show["1020_25"]);
 	pos_y = pos_y - 20
 end
 
