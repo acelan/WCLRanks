@@ -1,7 +1,7 @@
-## Interface: 30403
-## Interface-Wrath: 30403
+## Interface: 40400
+## Interface-Wrath: 40400
 ## Title: WCLRanks
-## Version: 3.2.20240502
+## Version: 4.0.20240504
 ## Author: acelan@acelan.idv.tw
 ## DefaultState: enabled
 ## SavedVariables: WCLRanksDB
