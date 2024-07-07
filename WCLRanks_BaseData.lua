@@ -1004,6 +1004,11 @@ WCLRanks_BaseData = {
 			['name']='冰冠城塞',
 			['encounters']='12'
 		},
+		[1023]={
+			['id']='1023',
+			['name']='TotFW/BWD/BoT',
+			['encounters']='13'
+		},
 	},
 	['zoneEncounters']={
 		[1014]={
@@ -1290,6 +1295,60 @@ WCLRanks_BaseData = {
 			{
 				['id']=856,
 				['name']='The Lich King',--"The Lich King"
+			},
+		},
+		[1023]={
+			{
+				['id']=1035,
+				['name']='風之議會',--"Conclave of Wind"
+			},
+			{
+				['id']=1034,
+				['name']='奧拉基爾',--"Al'Akir"
+			},
+			{
+				['id']=1027,
+				['name']='全能魔像防禦系統',--"Omnotron Defense System"
+			},
+			{
+				['id']=1024,
+				['name']='熔喉',--"Magmaw"
+			},
+			{
+				['id']=1022,
+				['name']='亞特拉米德',--"Atramedes"
+			},
+			{
+				['id']=1023,
+				['name']='奇瑪隆',--"Chimaeron"
+			},
+			{
+				['id']=1025,
+				['name']='瑪洛里亞克',--"Maloriak"
+			},
+			{
+				['id']=1026,
+				['name']='奈法利安的末路',--"Nefarian's End"
+			},
+			{
+				['id']=1030,
+				['name']='哈福斯•破龍者',--"Halfus Wyrmbreaker"
+			},
+			{
+				['id']=1032,
+				['name']='瑟拉里恩與瓦莉歐娜',--"Theralion and Valiona"
+			},
+			{
+				['id']=1028,
+				['name']='卓越者議會',--"Ascendant Council"
+			},
+			{
+				['id']=1029,
+				['name']='丘加利',--"Cho'gall"
+			},
+			{
+				['id']=1082,
+				['name']='賽絲特拉',--"Sinestra"
 			},
 		},
 	},

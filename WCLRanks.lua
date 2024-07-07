@@ -94,6 +94,8 @@ function WCLRanks:Init()
   self.db.show["1019_25"] = true;
   self.db.show["1020_10"] = true;
   self.db.show["1020_25"] = true;
+  self.db.show["1023_10"] = true;
+  self.db.show["1023_25"] = true;
   self:LogDebug("Init");
   self:SetScript("OnEvent", self.OnEvent);
   self:RegisterEvent("ADDON_LOADED");
@@ -175,113 +177,23 @@ function WCLRanks:InitOptions()
 	end)
 	self.optionNumSpec:SetValue(self.db.showNumSpec, false);
 	pos_y = pos_y - 40
-  -- Show NAXX/Sarth/Maly 10 player logs
-  self.optionShow_1015_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1015_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1015_10.Text:SetText(L["OPTION_SHOW_1015_10"]);
-	self.optionShow_1015_10:SetScript("OnClick", function(_, value)
-		self.db.show["1015_10"] = self.optionShow_1015_10:GetChecked();
+  -- Show TotFW/BWD/BoT 10 player logs
+  self.optionShow_1023_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1023_10:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1023_10.Text:SetText(L["OPTION_SHOW_1023_10"]);
+	self.optionShow_1023_10:SetScript("OnClick", function(_, value)
+		self.db.show["1023_10"] = self.optionShow_1023_10:GetChecked();
 	end)
-	self.optionShow_1015_10:SetChecked(self.db.show["1015_10"]);
+	self.optionShow_1023_10:SetChecked(self.db.show["1023_10"]);
 	pos_y = pos_y - 20
-  -- Show NAXX/Sarth/Maly 25 player logs
-  self.optionShow_1015_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1015_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1015_25.Text:SetText(L["OPTION_SHOW_1015_25"]);
-	self.optionShow_1015_25:SetScript("OnClick", function(_, value)
-		self.db.show["1015_25"] = self.optionShow_1015_25:GetChecked();
+  -- Show TotFW/BWD/BoT 25 player logs
+  self.optionShow_1023_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1023_25:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1023_25.Text:SetText(L["OPTION_SHOW_1023_25"]);
+	self.optionShow_1023_25:SetScript("OnClick", function(_, value)
+		self.db.show["1023_25"] = self.optionShow_1023_25:GetChecked();
 	end)
-	self.optionShow_1015_25:SetChecked(self.db.show["1015_25"]);
-	pos_y = pos_y - 20
-  -- Show Vault of Archavon 10 player logs
-  self.optionShow_1016_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1016_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1016_10.Text:SetText(L["OPTION_SHOW_1016_10"]);
-	self.optionShow_1016_10:SetScript("OnClick", function(_, value)
-		self.db.show["1016_10"] = self.optionShow_1016_10:GetChecked();
-	end)
-	self.optionShow_1016_10:SetChecked(self.db.show["1016_10"]);
-	pos_y = pos_y - 20
-  -- Show Vault of Archavon 25 player logs
-  self.optionShow_1016_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1016_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1016_25.Text:SetText(L["OPTION_SHOW_1016_25"]);
-	self.optionShow_1016_25:SetScript("OnClick", function(_, value)
-		self.db.show["1016_25"] = self.optionShow_1016_25:GetChecked();
-	end)
-	self.optionShow_1016_25:SetChecked(self.db.show["1016_25"]);
-	pos_y = pos_y - 20
-  -- Show Ulduar 10 player logs
-  self.optionShow_1017_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1017_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1017_10.Text:SetText(L["OPTION_SHOW_1017_10"]);
-	self.optionShow_1017_10:SetScript("OnClick", function(_, value)
-		self.db.show["1017_10"] = self.optionShow_1017_10:GetChecked();
-	end)
-	self.optionShow_1017_10:SetChecked(self.db.show["1017_10"]);
-	pos_y = pos_y - 20
-  -- Show Ulduar 25 player logs
-  self.optionShow_1017_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1017_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1017_25.Text:SetText(L["OPTION_SHOW_1017_25"]);
-	self.optionShow_1017_25:SetScript("OnClick", function(_, value)
-		self.db.show["1017_25"] = self.optionShow_1017_25:GetChecked();
-	end)
-	self.optionShow_1017_25:SetChecked(self.db.show["1017_25"]);
-	pos_y = pos_y - 20
-  -- Show Trial of the Crusader 10 player logs
-  self.optionShow_1018_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1018_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1018_10.Text:SetText(L["OPTION_SHOW_1018_10"]);
-	self.optionShow_1018_10:SetScript("OnClick", function(_, value)
-		self.db.show["1018_10"] = self.optionShow_1018_10:GetChecked();
-	end)
-	self.optionShow_1018_10:SetChecked(self.db.show["1018_10"]);
-	pos_y = pos_y - 20
-  -- Show Trial of the Crusader 25 player logs
-  self.optionShow_1018_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1018_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1018_25.Text:SetText(L["OPTION_SHOW_1018_25"]);
-	self.optionShow_1018_25:SetScript("OnClick", function(_, value)
-		self.db.show["1018_25"] = self.optionShow_1018_25:GetChecked();
-	end)
-	self.optionShow_1018_25:SetChecked(self.db.show["1018_25"]);
-	pos_y = pos_y - 20
-  -- Show Onyxia 10 player logs
-  self.optionShow_1019_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1019_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1019_10.Text:SetText(L["OPTION_SHOW_1019_10"]);
-	self.optionShow_1019_10:SetScript("OnClick", function(_, value)
-		self.db.show["1019_10"] = self.optionShow_1019_10:GetChecked();
-	end)
-	self.optionShow_1019_10:SetChecked(self.db.show["1019_10"]);
-	pos_y = pos_y - 20
-  -- Show Onyxia 25 player logs
-  self.optionShow_1019_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1019_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1019_25.Text:SetText(L["OPTION_SHOW_1019_25"]);
-	self.optionShow_1019_25:SetScript("OnClick", function(_, value)
-		self.db.show["1019_25"] = self.optionShow_1019_25:GetChecked();
-	end)
-	self.optionShow_1019_25:SetChecked(self.db.show["1019_25"]);
-	pos_y = pos_y - 20
-  -- Show Icecrown Citadel 10 player logs
-  self.optionShow_1020_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1020_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1020_10.Text:SetText(L["OPTION_SHOW_1020_10"]);
-	self.optionShow_1020_10:SetScript("OnClick", function(_, value)
-		self.db.show["1020_10"] = self.optionShow_1020_10:GetChecked();
-	end)
-	self.optionShow_1020_10:SetChecked(self.db.show["1020_10"]);
-	pos_y = pos_y - 20
-  -- Show Icecrown Citadel 25 player logs
-  self.optionShow_1020_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1020_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1020_25.Text:SetText(L["OPTION_SHOW_1020_25"]);
-	self.optionShow_1020_25:SetScript("OnClick", function(_, value)
-		self.db.show["1020_25"] = self.optionShow_1020_25:GetChecked();
-	end)
-	self.optionShow_1020_25:SetChecked(self.db.show["1020_25"]);
+	self.optionShow_1023_25:SetChecked(self.db.show["1023_25"]);
 	pos_y = pos_y - 20
 end
 
