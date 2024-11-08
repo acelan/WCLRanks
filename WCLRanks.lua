@@ -114,7 +114,6 @@ end
 function WCLRanks:InitOptions()
   self.optionsPanel = CreateFrame("Frame");
   self.optionsPanel.name = "WCLRanks";
-  InterfaceOptions_AddCategory(self.optionsPanel);
   pos_y = -20
   -- Chat integration
   self.optionCheckChat = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
@@ -177,24 +176,39 @@ function WCLRanks:InitOptions()
 	end)
 	self.optionNumSpec:SetValue(self.db.showNumSpec, false);
 	pos_y = pos_y - 40
-  -- Show TotFW/BWD/BoT 10 player logs
-  self.optionShow_1023_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1023_10:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1023_10.Text:SetText(L["OPTION_SHOW_1023_10"]);
-	self.optionShow_1023_10:SetScript("OnClick", function(_, value)
-		self.db.show["1023_10"] = self.optionShow_1023_10:GetChecked();
-	end)
-	self.optionShow_1023_10:SetChecked(self.db.show["1023_10"]);
-	pos_y = pos_y - 20
-  -- Show TotFW/BWD/BoT 25 player logs
-  self.optionShow_1023_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
-	self.optionShow_1023_25:SetPoint("TOPLEFT", 20, pos_y);
-	self.optionShow_1023_25.Text:SetText(L["OPTION_SHOW_1023_25"]);
-	self.optionShow_1023_25:SetScript("OnClick", function(_, value)
-		self.db.show["1023_25"] = self.optionShow_1023_25:GetChecked();
-	end)
-	self.optionShow_1023_25:SetChecked(self.db.show["1023_25"]);
-	pos_y = pos_y - 20
+
+	local options = {
+		name = "WCLRanks v" .. GetAddOnMetadata("WCLRanks", "Version"),
+		handler = WCLRanks,
+		type = "group",
+		args = {
+			showNumSpec = {
+				name = L["OPTION_NUM_SPEC"],
+				type = "slider",
+				low = 1,
+				max = 5,
+				desc = L["OPTION_NUM_SPEC"],
+				set = "Set",
+				get = "Get"
+			},
+			1023_10 = {
+				name = "TotFW/BWD/BoT(10)",
+				type = "toggle",
+				desc = L["OPTION_SHOW_1023_10"],
+				set = "Set",
+				get = "Get"
+			},
+			1023_25 = {
+				name = "TotFW/BWD/BoT(25)",
+				type = "toggle",
+				desc = L["OPTION_SHOW_1023_25"],
+				set = "Set",
+				get = "Get"
+			}
+		}
+	}
+  LibStub("AceConfig-3.0"):RegisterOptionsTable("WCLRanks", options, nil)
+  LibStub("AceConfigDialog-3.0"):AddToBlizOptions("WCLRanks", "WCLRanks")
 end
 
 function WCLRanks:LogOutput(...)
