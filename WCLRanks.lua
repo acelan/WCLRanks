@@ -114,7 +114,11 @@ end
 function WCLRanks:InitOptions()
   self.optionsPanel = CreateFrame("Frame");
   self.optionsPanel.name = "WCLRanks";
-  InterfaceOptions_AddCategory(self.optionsPanel);
+  local panel = self.optionsPanel
+  local name = panel.name
+  local category, layout = Settings.RegisterCanvasLayoutCategory(panel, name, name)
+  category.ID = name
+  Settings.RegisterAddOnCategory(category)
   pos_y = -20
   -- Chat integration
   self.optionCheckChat = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
