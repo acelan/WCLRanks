@@ -1009,6 +1009,11 @@ WCLRanks_BaseData = {
 			['name']='TotFW/BWD/BoT',
 			['encounters']='13'
 		},
+		[1027]={
+			['id']='1027',
+			['name']='Firelands',
+			['encounters']='7'
+		},
 	},
 	['zoneEncounters']={
 		[1014]={
@@ -1349,6 +1354,35 @@ WCLRanks_BaseData = {
 			{
 				['id']=1082,
 				['name']='賽絲特拉',--"Sinestra"
+			},
+		[1027]={
+			{
+				['id']=1205,
+				['name']='夏諾克斯',--"Shannox"
+			},
+			{
+				['id']=1204,
+				['name']='萊爾利斯領主',--"Lord Rhyolith"
+			},
+			{
+				['id']=1197,
+				['name']='貝絲堤拉克',--"Beth'tilac"
+			},
+			{
+				['id']=1206,
+				['name']='艾里絲拉卓',--"Alysrazor"
+			},
+			{
+				['id']=1200,
+				['name']='巴勒羅克',--"Baleroc"
+			},
+			{
+				['id']=1185,
+				['name']='管理者鹿盔',--"Majordomo Staghelm"
+			},
+			{
+				['id']=1203,
+				['name']='拉格納羅斯',--"Ragnaros"
 			},
 		},
 	},
