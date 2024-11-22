@@ -1355,6 +1355,7 @@ WCLRanks_BaseData = {
 				['id']=1082,
 				['name']='賽絲特拉',--"Sinestra"
 			},
+		},
 		[1027]={
 			{
 				['id']=1205,
@@ -1385,5 +1386,4 @@ WCLRanks_BaseData = {
 				['name']='拉格納羅斯',--"Ragnaros"
 			},
 		},
-	},
 };
