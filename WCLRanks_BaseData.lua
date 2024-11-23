@@ -1386,4 +1386,5 @@ WCLRanks_BaseData = {
 				['name']='拉格納羅斯',--"Ragnaros"
 			},
 		},
+	},
 };
