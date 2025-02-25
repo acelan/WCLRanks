@@ -98,6 +98,8 @@ function WCLRanks:Init()
   self.db.show["1023_25"] = true;
   self.db.show["1027_10"] = true;
   self.db.show["1027_25"] = true;
+  self.db.show["1033_10"] = true;
+  self.db.show["1033_25"] = true;
   self:LogDebug("Init");
   self:SetScript("OnEvent", self.OnEvent);
   self:RegisterEvent("ADDON_LOADED");
@@ -218,6 +220,24 @@ function WCLRanks:InitOptions()
 		self.db.show["1027_25"] = self.optionShow_1027_25:GetChecked();
 	end)
 	self.optionShow_1027_25:SetChecked(self.db.show["1027_25"]);
+	pos_y = pos_y - 20
+  -- Show Dragon Soul 10 player logs
+  self.optionShow_1033_10 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1033_10:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1033_10.Text:SetText(L["OPTION_SHOW_1033_10"]);
+	self.optionShow_1033_10:SetScript("OnClick", function(_, value)
+		self.db.show["1033_10"] = self.optionShow_1033_10:GetChecked();
+	end)
+	self.optionShow_1033_10:SetChecked(self.db.show["1033_10"]);
+	pos_y = pos_y - 20
+  -- Show Dragon Soul 25 player logs
+  self.optionShow_1033_25 = CreateFrame("CheckButton", nil, self.optionsPanel, "InterfaceOptionsCheckButtonTemplate");
+	self.optionShow_1033_25:SetPoint("TOPLEFT", 20, pos_y);
+	self.optionShow_1033_25.Text:SetText(L["OPTION_SHOW_1033_25"]);
+	self.optionShow_1033_25:SetScript("OnClick", function(_, value)
+		self.db.show["1033_25"] = self.optionShow_1033_25:GetChecked();
+	end)
+	self.optionShow_1033_25:SetChecked(self.db.show["1033_25"]);
 	pos_y = pos_y - 20
 end
 

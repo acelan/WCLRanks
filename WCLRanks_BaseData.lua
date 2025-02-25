@@ -1014,6 +1014,11 @@ WCLRanks_BaseData = {
 			['name']='Firelands',
 			['encounters']='7'
 		},
+		[1033]={
+			['id']='1033',
+			['name']='Dragon Soul',
+			['encounters']='8'
+		},
 	},
 	['zoneEncounters']={
 		[1014]={
@@ -1384,6 +1389,40 @@ WCLRanks_BaseData = {
 			{
 				['id']=1203,
 				['name']='拉格納羅斯',--"Ragnaros"
+			},
+		},
+		[1033]={
+			{
+				['id']=1292,
+				['name']="Morchok",
+			},
+			{
+				['id']=1294,
+				['name']='Warlord Zon\'ozz',
+			},
+			{
+				['id']=1295,
+				['name']='Yor\'sahj the Unsleeping',
+			},
+			{
+				['id']=1296,
+				['name']='Hagara the Stormbinder',
+			},
+			{
+				['id']=1297,
+				['name']='Ultraxion',
+			},
+			{
+				['id']=1298,
+				['name']='Warmaster Blackhorn',
+			},
+			{
+				['id']=1291,
+				['name']='Spine of Deathwing',
+			},
+			{
+				['id']=1299,
+				['name']='Madness of Deathwing',
 			},
 		},
 	},
