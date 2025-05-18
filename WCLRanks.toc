@@ -1,7 +1,7 @@
 ## Interface: 40402
 ## Interface-Wrath: 40402
 ## Title: WCLRanks
-## Version: 5.0.20250518
+## Version: 5.0.20250519
 ## Author: acelan@acelan.idv.tw
 ## DefaultState: enabled
 ## SavedVariables: WCLRanksDB
