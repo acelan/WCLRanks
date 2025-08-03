@@ -1,6 +1,6 @@
 ## Interface: 50500
 ## Title: WCLRanks
-## Version: 5.0.20250803
+## Version: 5.0.20250804
 ## Author: acelan@acelan.idv.tw
 ## DefaultState: enabled
 ## SavedVariables: WCLRanksDB
